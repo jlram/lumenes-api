@@ -11,11 +11,11 @@
 Básicamente tenemos que hacer
 
 ```
-pip install virtualenv`
+pip install virtualenv
 
 python -m venv env
 
-`source env/bin/activate
+source env/bin/activate
 
 # o en algunos casos si en vez de carpeta 'bin' teneis 'Scripts'
 
