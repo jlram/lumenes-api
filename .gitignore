@@ -1,0 +1,11 @@
+# BBDD
+db.sqlite3
+
+# Virtual enviroment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
