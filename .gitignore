@@ -15,4 +15,4 @@ venv.bak/
 
 # Cache
 lumenes_api/__pycache__/
-lumenes_api/lumenes/__pycache__/
+lumenes/__pycache__/

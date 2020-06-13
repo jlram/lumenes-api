@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from lumenes_api.lumenes.models import Video
+from lumenes.models import Video
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

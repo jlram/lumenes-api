@@ -1,9 +1,9 @@
-from django.test import TestCase
 from django.urls import reverse
 from rest_framework.views import status
 from rest_framework.test import APITestCase, APIClient
 
-from lumenes_api.lumenes.models import Video
+from lumenes.models import Video
+from lumenes.serializers import VideoSerializer
 
 
 class BaseViewTest(APITestCase):
@@ -34,6 +34,6 @@ class GetAllVideosTest(BaseViewTest):
         )
         # fetch the data from db
         expected = Video.objects.all()
-        serialized = Video(expected, many=True)
+        serialized = VideoSerializer(expected, many=True)
         self.assertEqual(response.data, serialized.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

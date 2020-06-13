@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path, include
 from rest_framework import routers
 
-from lumenes_api.lumenes import views
+from lumenes import views
 
 
 router = routers.DefaultRouter()
@@ -13,5 +13,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('videos/', views.ListVideosView.as_view(), name="videos-all")
+    re_path('api/(?P<version>(v1|v2))/', include('lumenes.urls'))
 ]

@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions, generics
 
-from lumenes_api.lumenes.models import Video
-from lumenes_api.lumenes.serializers import UserSerializer, VideoSerializer
+from lumenes.models import Video
+from lumenes.serializers import UserSerializer, VideoSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
