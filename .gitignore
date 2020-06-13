@@ -1,6 +1,5 @@
 # BBDD
 db.sqlite3
-lumenes_api/lumenes/migrations/
 
 # Virtual enviroment
 .env
