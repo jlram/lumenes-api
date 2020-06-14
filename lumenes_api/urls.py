@@ -8,10 +8,10 @@ from lumenes import views
 router = routers.DefaultRouter()
 
 router.register(r'users', views.UserViewSet)
+router.register(r'videos', views.VideoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    re_path('api/(?P<version>(v1|v2))/', include('lumenes.urls'))
 ]

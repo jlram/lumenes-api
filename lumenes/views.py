@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from rest_framework import viewsets, permissions, generics
+from rest_framework import viewsets, permissions
 
 from lumenes.models import Video
 from lumenes.serializers import UserSerializer, VideoSerializer
@@ -11,7 +11,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-class ListVideosView(generics.ListAPIView):
+class VideoViewSet(viewsets.ModelViewSet):
     """
     Provides a get method handler for the videos
     """
