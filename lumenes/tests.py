@@ -36,9 +36,12 @@ class VideoViewTest(APITestCase):
         serialized = VideoSerializer(expected, many=True)
         # Compare the API results with the data in the DB
         self.assertEqual(
+            response.status_code, status.HTTP_200_OK,
+            msg="The API response was not successful but '{}' instead".format(response.status_code)
+        )
+        self.assertEqual(
             response.data, serialized.data,
             msg="The response from the API ('{0}') does not match the result from the DB ('{1}')".format(
                 response.data, serialized.data
             )
         )
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
