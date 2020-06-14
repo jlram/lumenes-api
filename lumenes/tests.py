@@ -1,4 +1,3 @@
-from django.urls import reverse
 from rest_framework.views import status
 from rest_framework.test import APITestCase, APIClient
 
@@ -23,7 +22,7 @@ class VideoViewTest(APITestCase):
         self.create_video("Plantas", base_url + "plantas")
         self.create_video("TPJ", base_url + "tpj")
         self.create_video("Vida en el desierto", base_url + "vida_en_el_desierto")
-        self.create_video("Contactar siempre", base_url + "cantactar_siempre")
+        self.create_video("Contactar siempre", base_url + "contactar_siempre")
 
     def test_get_all_videos(self):
         """

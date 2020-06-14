@@ -14,5 +14,4 @@ venv.bak/
 .idea/
 
 # Cache
-lumenes_api/__pycache__/
-lumenes/__pycache__/
+__pycache__/
